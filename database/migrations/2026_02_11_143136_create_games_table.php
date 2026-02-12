@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
         $table->id();
         $table->string('nama');
-        $table->string('satuan'); 
+        $table->string('publisher');
+        $table->string('satuan');
         $table->string('gambar');
         $table->text('deskripsi');
         $table->timestamps();
