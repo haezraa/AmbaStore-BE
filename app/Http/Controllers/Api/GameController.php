@@ -30,7 +30,6 @@ class GameController extends Controller
             ], 404);
         }
 
-        // Kalau gamenya ada
         return response()->json([
             'sukses' => true,
             'pesan'  => 'Detail Game berhasil ditarik',

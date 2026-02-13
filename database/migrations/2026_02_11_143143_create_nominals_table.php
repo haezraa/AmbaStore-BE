@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('nominals', function (Blueprint $table) {
             $table->id();
             $table->foreignId('game_id')->constrained('games')->onDelete('cascade');
+            $table->string('kategori');
             $table->string('jumlah');
             $table->integer('harga');
             $table->timestamps();
