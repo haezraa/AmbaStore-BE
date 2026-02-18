@@ -18,10 +18,13 @@ class DatabaseSeeder extends Seeder
             'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2FMLBBIndofix-ezgif.com-optijpeg.jpg&w=1920&q=75',
             'deskripsi' => 'Top up Diamond ML aman & legal 100%'
         ]);
-        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '86 Diamonds', 'harga' => 20000]);
-        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '172 Diamonds', 'harga' => 40000]);
+        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '5 Diamonds', 'harga' => 1500]);
+        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '44 Diamonds', 'harga' => 11500]);
+        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '86 Diamonds', 'harga' => 23000]);
+        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '110 Diamonds', 'harga' => 31000]);
+        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '172 Diamonds', 'harga' => 47000]);
         Nominal::create(['game_id' => $ml->id, 'kategori' => 'Membership', 'jumlah' => 'Weekly Diamond Pass', 'harga' => 28000]);
-        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Membership', 'jumlah' => 'Starlight Member', 'harga' => 145000]);
+        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Membership', 'jumlah' => 'Twilight Pass', 'harga' => 150000]);
 
         $genshin = Game::create([
             'nama' => 'Genshin Impact',

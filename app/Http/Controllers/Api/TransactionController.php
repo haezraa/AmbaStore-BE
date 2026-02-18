@@ -9,6 +9,22 @@ use Illuminate\Support\Str;
 
 class TransactionController extends Controller
 {
+    public function checkStatus($invoice)
+    {
+        $transaction = \App\Models\Transaction::where('invoice_code', $invoice)->first();
+
+        if (!$transaction) {
+            return response()->json(['sukses' => false, 'pesan' => 'Data gak ada bro'], 404);
+        }
+
+        return response()->json([
+            'sukses' => true,
+            'data' => [
+                'status' => $transaction->status 
+            ]
+        ]);
+    }
+
     public function store(Request $request)
     {
         $invoice = 'TRX-' . strtoupper(Str::random(6));
