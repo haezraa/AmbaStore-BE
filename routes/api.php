@@ -10,6 +10,7 @@ Route::get('/games', [GameController::class, 'index']);
 Route::get('/payments', [PaymentController::class, 'index']);
 Route::post('/transaction', [TransactionController::class, 'store']);
 Route::get('/games/{id}', [GameController::class, 'show']);
+Route::post('/check-nickname', [\App\Http\Controllers\Api\GameController::class, 'checkNickname']);
 Route::get('/transaction/{invoice}', [TransactionController::class, 'checkStatus']);
 
 Route::get('/user', function (Request $request) {
