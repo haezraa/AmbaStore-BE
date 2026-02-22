@@ -18,25 +18,13 @@ class DatabaseSeeder extends Seeder
             'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2FMLBBIndofix-ezgif.com-optijpeg.jpg&w=1920&q=75',
             'deskripsi' => 'Top up Diamond ML aman & legal 100%'
         ]);
-        Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '5 Diamonds', 'harga' => 1500]);
+         Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '5 Diamonds', 'harga' => 1500]);
         Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '44 Diamonds', 'harga' => 11500]);
         Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '86 Diamonds', 'harga' => 23000]);
         Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '110 Diamonds', 'harga' => 31000]);
         Nominal::create(['game_id' => $ml->id, 'kategori' => 'Diamonds', 'jumlah' => '172 Diamonds', 'harga' => 47000]);
         Nominal::create(['game_id' => $ml->id, 'kategori' => 'Membership', 'jumlah' => 'Weekly Diamond Pass', 'harga' => 28000]);
         Nominal::create(['game_id' => $ml->id, 'kategori' => 'Membership', 'jumlah' => 'Twilight Pass', 'harga' => 150000]);
-
-        $genshin = Game::create([
-            'nama' => 'Genshin Impact',
-            'publisher' => 'HoYoverse',
-            'satuan' => 'Genesis Crystals',
-            'input_type' => 'server_id',
-            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2Fbbcbed30-004a-490e-80da-6da748fe302f.jpg&w=1920&q=75',
-            'deskripsi' => 'Isi Genesis Crystal buat Gacha Archon!'
-        ]);
-        Nominal::create(['game_id' => $genshin->id, 'kategori' => 'Genesis Crystals', 'jumlah' => '60 Genesis Crystals', 'harga' => 16000]);
-        Nominal::create(['game_id' => $genshin->id, 'kategori' => 'Genesis Crystals', 'jumlah' => '300+30 Genesis Crystals', 'harga' => 79000]);
-        Nominal::create(['game_id' => $genshin->id, 'kategori' => 'Membership', 'jumlah' => 'Welkin Moon', 'harga' => 79000]);
 
         $ff = Game::create([
             'nama' => 'Free Fire',
@@ -48,6 +36,28 @@ class DatabaseSeeder extends Seeder
         ]);
         Nominal::create(['game_id' => $ff->id, 'kategori' => 'Diamonds', 'jumlah' => '140 Diamonds', 'harga' => 20000]);
         Nominal::create(['game_id' => $ff->id, 'kategori' => 'Membership', 'jumlah' => 'Member Mingguan', 'harga' => 30000]);
+
+        $codm = Game::create([
+            'nama' => 'Call of Duty: Mobile',
+            'publisher' => 'Garena',
+            'satuan' => 'CP',
+            'input_type' => 'uid_only',
+            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2F741e9167-79ff-4e4d-bd71-f9ddb26b173b.jpg&w=1920&q=75',
+            'deskripsi' => 'Top up CP murah buat draw Lucky Draw'
+        ]);
+        Nominal::create(['game_id' => $codm->id, 'kategori' => 'CP', 'jumlah' => '53 CP', 'harga' => 10000]);
+        Nominal::create(['game_id' => $codm->id, 'kategori' => 'CP', 'jumlah' => '321 CP', 'harga' => 50000]);
+
+        $genshin = Game::create([
+            'nama' => 'Genshin Impact',
+            'publisher' => 'HoYoverse',
+            'satuan' => 'Genesis Crystals',
+            'input_type' => 'server_id',
+            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2Fbbcbed30-004a-490e-80da-6da748fe302f.jpg&w=1920&q=75',
+            'deskripsi' => 'Isi Genesis Crystal buat Gacha Archon!'
+        ]);
+        Nominal::create(['game_id' => $genshin->id, 'kategori' => 'Crystals', 'jumlah' => '60 Crystals', 'harga' => 16000]);
+        Nominal::create(['game_id' => $genshin->id, 'kategori' => 'Membership', 'jumlah' => 'Welkin Moon', 'harga' => 79000]);
 
         $valo = Game::create([
             'nama' => 'Valorant',
@@ -68,69 +78,49 @@ class DatabaseSeeder extends Seeder
             'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2Feb34737a-d6c4-4292-8a43-da5892a1dde2.webp&w=1920&q=75',
             'deskripsi' => 'Gacha Seele & Kafka'
         ]);
-        Nominal::create(['game_id' => $hsr->id, 'kategori' => 'Shards', 'jumlah' => '60 Oneiric Shards', 'harga' => 16000]);
+        Nominal::create(['game_id' => $hsr->id, 'kategori' => 'Shards', 'jumlah' => '60 Shards', 'harga' => 16000]);
         Nominal::create(['game_id' => $hsr->id, 'kategori' => 'Membership', 'jumlah' => 'Express Supply Pass', 'harga' => 79000]);
 
-        $pubg = Game::create([
-            'nama' => 'PUBG Mobile',
-            'publisher' => 'Level Infinite',
-            'satuan' => 'UC',
-            'input_type' => 'uid_only',
-            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2Fb94ea08a-6890-4dfd-8073-7b8479722504.png&w=1920&q=75',
-            'deskripsi' => 'Top up UC resmi'
-        ]);
-        Nominal::create(['game_id' => $pubg->id, 'kategori' => 'UC', 'jumlah' => '60 UC', 'harga' => 14000]);
-        Nominal::create(['game_id' => $pubg->id, 'kategori' => 'Bundles', 'jumlah' => 'Royale Pass', 'harga' => 150000]);
-
-        $wuwa = Game::create([
-            'nama' => 'Wuthering Waves',
-            'publisher' => 'Kuro Games',
-            'satuan' => 'Lunites',
+        $zzz = Game::create([
+            'nama' => 'Zenless Zone Zero',
+            'publisher' => 'HoYoverse',
+            'satuan' => 'Monochromes',
             'input_type' => 'server_id',
-            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2Fwutheringwaves-ezgif.com-optijpeg.jpg&w=1920&q=75',
-            'deskripsi' => 'Top up Lunites buat dapetin Resonator bintang 5'
+            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2Fzenlesszonezero-ezgif.com-optijpeg.jpg&w=1920&q=75', // Contoh gambar
+            'deskripsi' => 'Top up buat dapetin agen S-Rank idamanmu!'
         ]);
-        // Kategori: Lunites
-        Nominal::create(['game_id' => $wuwa->id, 'kategori' => 'Lunites', 'jumlah' => '60 Lunites', 'harga' => 15000]);
-        Nominal::create(['game_id' => $wuwa->id, 'kategori' => 'Lunites', 'jumlah' => '300+30 Lunites', 'harga' => 75000]);
-        // Kategori: Membership
-        Nominal::create(['game_id' => $wuwa->id, 'kategori' => 'Membership', 'jumlah' => 'Lunite Subscription', 'harga' => 75000]);
+        Nominal::create(['game_id' => $zzz->id, 'kategori' => 'Monochromes', 'jumlah' => '60 Monochromes', 'harga' => 16000]);
+        Nominal::create(['game_id' => $zzz->id, 'kategori' => 'Membership', 'jumlah' => 'Inter-Knot Membership', 'harga' => 79000]);
 
-        $df = Game::create([
-            'nama' => 'Delta Force',
-            'publisher' => 'Team Jade',
-            'satuan' => 'Delta Coins',
+        $mcgg = Game::create([
+            'nama' => 'Magic Chess: Go Go',
+            'publisher' => 'Moonton',
+            'satuan' => 'Go Go Coins',
+            'input_type' => 'id_zone',
+            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2Fmagicchessgogo-ezgif.com-optijpeg.jpg&w=1920&q=75', // Contoh gambar
+            'deskripsi' => 'Top up koin Magic Chess'
+        ]);
+        Nominal::create(['game_id' => $mcgg->id, 'kategori' => 'Coins', 'jumlah' => '100 Coins', 'harga' => 15000]);
+
+        $pgr = Game::create([
+            'nama' => 'Punishing: Gray Raven',
+            'publisher' => 'Kuro Game',
+            'satuan' => 'Rainbow Cards',
             'input_type' => 'uid_only',
-            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2Fdeltaforcegarenafix-ezgif.com-optijpeg.jpg&w=1920&q=75',
-            'deskripsi' => 'Siap tempur dengan skin operator terbaru'
+            'gambar' => 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Punishing_Gray_Raven_icon.png/220px-Punishing_Gray_Raven_icon.png', // Contoh
+            'deskripsi' => 'Beli Rainbow Cards buat gacha Konstruk!'
         ]);
-        Nominal::create(['game_id' => $df->id, 'kategori' => 'Coins', 'jumlah' => '100 Delta Coins', 'harga' => 15000]);
-        Nominal::create(['game_id' => $df->id, 'kategori' => 'Coins', 'jumlah' => '500 Delta Coins', 'harga' => 75000]);
-        Nominal::create(['game_id' => $df->id, 'kategori' => 'Membership', 'jumlah' => 'Battle Pass Premium', 'harga' => 150000]);
+        Nominal::create(['game_id' => $pgr->id, 'kategori' => 'Cards', 'jumlah' => '5 Rainbow Cards', 'harga' => 16000]);
 
-        $codm = Game::create([
-            'nama' => 'Call of Duty: Mobile',
+        $aov = Game::create([
+            'nama' => 'Arena of Valor',
             'publisher' => 'Garena',
-            'satuan' => 'CP',
+            'satuan' => 'Vouchers',
             'input_type' => 'uid_only',
-            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2F741e9167-79ff-4e4d-bd71-f9ddb26b173b.jpg&w=1920&q=75',
-            'deskripsi' => 'Top up CP murah buat draw Lucky Draw'
+            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2F8f5b89eb-2b87-4b7d-8153-29a3e5e4811a.png&w=1920&q=75',
+            'deskripsi' => 'Top up Voucher AOV resmi'
         ]);
-        Nominal::create(['game_id' => $codm->id, 'kategori' => 'CP', 'jumlah' => '53 CP', 'harga' => 10000]);
-        Nominal::create(['game_id' => $codm->id, 'kategori' => 'CP', 'jumlah' => '321 CP', 'harga' => 50000]);
-        Nominal::create(['game_id' => $codm->id, 'kategori' => 'Membership', 'jumlah' => 'Battle Pass', 'harga' => 80000]);
-
-        $coc = Game::create([
-            'nama' => 'Clash of Clans',
-            'publisher' => 'Supercell',
-            'satuan' => 'Gems',
-            'input_type' => 'uid_only',
-            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2F41e1b5a0-ffac-494f-8104-8bcfbb0de9cb.webp&w=1920&q=75',
-            'deskripsi' => 'Beli Gems buat cepetin upgrade Town Hall'
-        ]);
-        Nominal::create(['game_id' => $coc->id, 'kategori' => 'Gems', 'jumlah' => '80 Gems', 'harga' => 15000]);
-        Nominal::create(['game_id' => $coc->id, 'kategori' => 'Gems', 'jumlah' => '500 Gems', 'harga' => 75000]);
-        Nominal::create(['game_id' => $coc->id, 'kategori' => 'Membership', 'jumlah' => 'Gold Pass', 'harga' => 99000]);
+        Nominal::create(['game_id' => $aov->id, 'kategori' => 'Vouchers', 'jumlah' => '40 Vouchers', 'harga' => 10000]);
 
         $payments = [
             ['nama' => 'GoPay', 'kode' => 'gopay', 'kategori' => 'E-Wallet', 'gambar' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/1200px-Gopay_logo.svg.png'],
