@@ -86,7 +86,7 @@ class DatabaseSeeder extends Seeder
             'publisher' => 'HoYoverse',
             'satuan' => 'Monochromes',
             'input_type' => 'server_id',
-            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2Fzenlesszonezero-ezgif.com-optijpeg.jpg&w=1920&q=75', // Contoh gambar
+            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2FZZZ-ezgif.com-optijpeg.jpg&w=1920&q=75',
             'deskripsi' => 'Top up buat dapetin agen S-Rank idamanmu!'
         ]);
         Nominal::create(['game_id' => $zzz->id, 'kategori' => 'Monochromes', 'jumlah' => '60 Monochromes', 'harga' => 16000]);
@@ -97,7 +97,7 @@ class DatabaseSeeder extends Seeder
             'publisher' => 'Moonton',
             'satuan' => 'Go Go Coins',
             'input_type' => 'id_zone',
-            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2Fmagicchessgogo-ezgif.com-optijpeg.jpg&w=1920&q=75', // Contoh gambar
+            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fourastore.com%2Fproduct%2Fmagicchessgogo-ezgif.com-optijpeg.jpg&w=1920&q=75',
             'deskripsi' => 'Top up koin Magic Chess'
         ]);
         Nominal::create(['game_id' => $mcgg->id, 'kategori' => 'Coins', 'jumlah' => '100 Coins', 'harga' => 15000]);
@@ -107,7 +107,7 @@ class DatabaseSeeder extends Seeder
             'publisher' => 'Kuro Game',
             'satuan' => 'Rainbow Cards',
             'input_type' => 'uid_only',
-            'gambar' => 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Punishing_Gray_Raven_icon.png/220px-Punishing_Gray_Raven_icon.png', // Contoh
+            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fcdn.ourastore.com%2Fb9bcf79b-7176-45d4-9979-ec3650c202f0.jpg&w=1920&q=75',
             'deskripsi' => 'Beli Rainbow Cards buat gacha Konstruk!'
         ]);
         Nominal::create(['game_id' => $pgr->id, 'kategori' => 'Cards', 'jumlah' => '5 Rainbow Cards', 'harga' => 16000]);
@@ -117,7 +117,7 @@ class DatabaseSeeder extends Seeder
             'publisher' => 'Garena',
             'satuan' => 'Vouchers',
             'input_type' => 'uid_only',
-            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2F8f5b89eb-2b87-4b7d-8153-29a3e5e4811a.png&w=1920&q=75',
+            'gambar' => 'https://www.ourastore.com/_next/image?url=https%3A%2F%2Fclient-cdn.bangjeff.com%2F532e8ca5-1967-46f8-a6b4-bc55aa501a16.jpg&w=1920&q=75',
             'deskripsi' => 'Top up Voucher AOV resmi'
         ]);
         Nominal::create(['game_id' => $aov->id, 'kategori' => 'Vouchers', 'jumlah' => '40 Vouchers', 'harga' => 10000]);
