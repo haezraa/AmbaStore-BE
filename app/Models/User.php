@@ -19,6 +19,9 @@ class User extends Authenticatable
         'email',
         'whatsapp',
         'password',
+        'amba_coin',       
+        'login_streak',
+        'last_claim_date',
     ];
 
     /**
